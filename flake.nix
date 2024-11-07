@@ -15,6 +15,9 @@
 
     srvos.url = "github:nix-community/srvos?shallow=1";
     srvos.inputs.nixpkgs.follows = "nixpkgs";
+
+    phaer-keys.url = "https://github.com/phaer.keys";
+    phaer-keys.flake = false;
   };
 
   outputs =

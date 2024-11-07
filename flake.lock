@@ -103,11 +103,24 @@
         "type": "github"
       }
     },
+    "phaer-keys": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-HLNLLFPks99lCZbvI6aCkGUhZqIUx+Th5cFm/hTQ2YY=",
+        "type": "file",
+        "url": "https://github.com/phaer.keys"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/phaer.keys"
+      }
+    },
     "root": {
       "inputs": {
         "clan": "clan",
         "flake-parts": "flake-parts",
         "nixpkgs": "nixpkgs",
+        "phaer-keys": "phaer-keys",
         "srvos": "srvos",
         "treefmt-nix": "treefmt-nix"
       }
