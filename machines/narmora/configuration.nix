@@ -5,6 +5,9 @@
 
 {
   clan.core.networking.targetHost = "root@188.245.150.72";
+  clan.core.sops.defaultGroups = [
+      "admins"
+  ];
 
   imports = [
     ./disko.nix
