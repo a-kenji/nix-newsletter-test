@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable&shallow=1";
 
     clan.url = "git+https://git.clan.lol/clan/clan-core?shallow=1";
     clan.inputs.nixpkgs.follows = "nixpkgs";
