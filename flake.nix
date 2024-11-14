@@ -1,6 +1,7 @@
 {
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable&shallow=1";
+    # https://github.com/NixOS/nixpkgs/pull/355969
+    nixpkgs.url = "github:phaer/nixpkgs?ref=hebbot-package&shallow=1";
 
     clan.url = "git+https://git.clan.lol/clan/clan-core?shallow=1";
     clan.inputs.nixpkgs.follows = "nixpkgs";
@@ -15,6 +16,9 @@
 
     srvos.url = "github:nix-community/srvos?shallow=1";
     srvos.inputs.nixpkgs.follows = "nixpkgs";
+
+    hebbot.url = "github:haecker-felix/hebbot";
+    hebbot.flake = false;
 
     phaer-keys.url = "https://github.com/phaer.keys";
     phaer-keys.flake = false;
@@ -32,6 +36,7 @@
         imports = [
           ./nix/checks.nix
           ./nix/clan.nix
+          ./nix/packages.nix
           ./nix/devshells.nix
           ./nix/formatter.nix
         ];
