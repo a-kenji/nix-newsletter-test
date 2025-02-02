@@ -4,7 +4,6 @@
     # nixpkgs.url = "github:phaer/nixpkgs?ref=hebbot-package&shallow=1";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable?shallow=1";
 
-
     clan.url = "git+https://git.clan.lol/clan/clan-core?shallow=1";
     clan.inputs.nixpkgs.follows = "nixpkgs";
     clan.inputs.flake-parts.follows = "flake-parts";
