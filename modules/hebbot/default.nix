@@ -18,7 +18,7 @@ in
 
   services.hebbot = {
     enable = true;
-    package = inputs.self.packages.${pkgs.system}.hebbot;
+    # package = inputs.self.packages.${pkgs.system}.hebbot;
     botPasswordFile = config.clan.core.vars.generators.this-week-in-nix.files.password.path;
     settings = {
       bot_user_id = config.clan.core.vars.generators.this-week-in-nix.files.username.value;
