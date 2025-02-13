@@ -115,12 +115,25 @@
         "url": "https://github.com/phaer.keys"
       }
     },
+    "pinpox-keys": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-PVfExrFgaauIxhIXs1MLbTYEGbF9z6XGfbSLmvoNz44=",
+        "type": "file",
+        "url": "https://github.com/pinpox.keys"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/pinpox.keys"
+      }
+    },
     "root": {
       "inputs": {
         "clan": "clan",
         "flake-parts": "flake-parts",
         "nixpkgs": "nixpkgs",
         "phaer-keys": "phaer-keys",
+        "pinpox-keys": "pinpox-keys",
         "srvos": "srvos",
         "treefmt-nix": "treefmt-nix"
       }

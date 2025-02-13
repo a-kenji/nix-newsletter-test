@@ -18,6 +18,9 @@
 
     phaer-keys.url = "https://github.com/phaer.keys";
     phaer-keys.flake = false;
+
+    pinpox-keys.url = "https://github.com/pinpox.keys";
+    pinpox-keys.flake = false;
   };
 
   outputs =
