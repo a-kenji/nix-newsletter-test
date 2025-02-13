@@ -21,6 +21,9 @@
 
     pinpox-keys.url = "https://github.com/pinpox.keys";
     pinpox-keys.flake = false;
+
+    hsjobeki-keys.url = "https://github.com/hsjobeki.keys";
+    hsjobeki-keys.flake = false;
   };
 
   outputs =

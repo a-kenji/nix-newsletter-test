@@ -72,6 +72,18 @@
         "type": "github"
       }
     },
+    "hsjobeki-keys": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-CmooAZ4IfZWHHfOxTOqQxjR6PwqVkKsPjE5wbzzqUBs=",
+        "type": "file",
+        "url": "https://github.com/hsjobeki.keys"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/hsjobeki.keys"
+      }
+    },
     "nixos-facter-modules": {
       "locked": {
         "lastModified": 1736931726,
@@ -131,6 +143,7 @@
       "inputs": {
         "clan": "clan",
         "flake-parts": "flake-parts",
+        "hsjobeki-keys": "hsjobeki-keys",
         "nixpkgs": "nixpkgs",
         "phaer-keys": "phaer-keys",
         "pinpox-keys": "pinpox-keys",
