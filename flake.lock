@@ -72,22 +72,6 @@
         "type": "github"
       }
     },
-    "hebbot": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1739049143,
-        "narHash": "sha256-Lz2fZQZIVywbKe9AGikYqJky78sb/OJqyDJcMka0Oec=",
-        "owner": "haecker-felix",
-        "repo": "hebbot",
-        "rev": "bd8bb7b5f3daf6926841007115324fb513b8476f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "haecker-felix",
-        "repo": "hebbot",
-        "type": "github"
-      }
-    },
     "nixos-facter-modules": {
       "locked": {
         "lastModified": 1736931726,
@@ -135,7 +119,6 @@
       "inputs": {
         "clan": "clan",
         "flake-parts": "flake-parts",
-        "hebbot": "hebbot",
         "nixpkgs": "nixpkgs",
         "phaer-keys": "phaer-keys",
         "srvos": "srvos",
