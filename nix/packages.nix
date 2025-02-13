@@ -15,11 +15,11 @@
           in
           {
             inherit name src;
-            cargoDeps = old.cargoDeps.overrideAttrs ({
+            cargoDeps = old.cargoDeps.overrideAttrs {
               name = "${old.pname}-vendor.tar.gz";
               inherit src;
               outputHash = "sha256-g9pWFE4G2/aPNQUbg8Etb5UFDIsiDKHLMiAp+1xMd1g=";
-            });
+            };
           }
         );
       };
