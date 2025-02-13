@@ -72,6 +72,22 @@
         "type": "github"
       }
     },
+    "hebbot": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1739049143,
+        "narHash": "sha256-Lz2fZQZIVywbKe9AGikYqJky78sb/OJqyDJcMka0Oec=",
+        "owner": "haecker-felix",
+        "repo": "hebbot",
+        "rev": "bd8bb7b5f3daf6926841007115324fb513b8476f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "haecker-felix",
+        "repo": "hebbot",
+        "type": "github"
+      }
+    },
     "hsjobeki-keys": {
       "flake": false,
       "locked": {
@@ -101,16 +117,15 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1739214665,
-        "narHash": "sha256-26L8VAu3/1YRxS8MHgBOyOM8xALdo6N0I04PgorE7UM=",
+        "lastModified": 1739689900,
+        "narHash": "sha256-wxxb9hzfRXyWSBSO6/LUxq1rt2OpjGbgWceuKSmaQWY=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "64e75cd44acf21c7933d61d7721e812eac1b5a0a",
+        "rev": "6d3b5347984fbf7f8c97711ee6765db0280ad4b1",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
-        "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -143,6 +158,7 @@
       "inputs": {
         "clan": "clan",
         "flake-parts": "flake-parts",
+        "hebbot": "hebbot",
         "hsjobeki-keys": "hsjobeki-keys",
         "nixpkgs": "nixpkgs",
         "phaer-keys": "phaer-keys",
