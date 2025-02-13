@@ -11,6 +11,7 @@
         "*/facter.json"
         "LICENSE"
         "sops/*"
+        "vars/*"
       ];
     };
   };
