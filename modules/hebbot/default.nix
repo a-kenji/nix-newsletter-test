@@ -16,15 +16,25 @@ in
     ./state.nix
   ];
 
-  services.hebbot = {
+  services.hebbot = 
+    let 
+      publish_command = pkgs.writeScriptBin "publish_command"
+        ''
+          #! ${pkgs.stdenv.shell}
+          cat -
+          echo test
+        '';
+    in
+    {
     enable = true;
-    # package = inputs.self.packages.${pkgs.system}.hebbot;
+    package = inputs.self.packages.${pkgs.system}.hebbot;
     botPasswordFile = config.clan.core.vars.generators.this-week-in-nix.files.password.path;
     settings = {
       bot_user_id = config.clan.core.vars.generators.this-week-in-nix.files.username.value;
       reporting_room_id = "!BJHtvOvAduXHBtFrAA:matrix.org";
       admin_room_id = "!QAPnvBhMyaqqOTESwS:matrix.org";
       update_config_command = "echo 'clan machines update'";
+      publish_command = lib.getExe publish_command;
       min_length = 0;
       verbs = [
         "reports"
@@ -67,7 +77,7 @@ in
           inherit usual_reporters;
         }
         {
-          emoji = "🏘";
+          emoji = "🏘 nix-community";
           name = "nix-community";
           title = "nix-community";
           description = "Nix community projects";
@@ -125,6 +135,14 @@ in
           default_section = "nix-community";
         }
         {
+          emoji = "noogle";
+          name = "noogle";
+          title = "noogle";
+          description = "https://noogle.dev - nix function exploring.";
+          website = "https://noogle.dev/";
+          default_section = "nix-community";
+        }
+        {
           emoji = "🐛";
           name = "nixos-anywhere";
           title = "nixos-anywhere";
@@ -171,6 +189,7 @@ in
       section = ./templates/section.md;
       project = ./templates/project.md;
       report = ./templates/report.md;
+      template = ./templates/template.md;
     };
   };
 
