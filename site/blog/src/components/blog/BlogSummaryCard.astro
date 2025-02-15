@@ -1,0 +1,55 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Pill, Button } from "@eliancodes/brutal-ui";
+import SummaryCard from "../generic/SummaryCard.astro";
+import dayjs from "dayjs";
+
+interface Props {
+  post: CollectionEntry<"blog">;
+}
+
+const { post } = Astro.props;
+---
+
+<SummaryCard
+  title={`${post.data.pubDate.getFullYear()} / ${post.data.title}`}
+  description={post.data.description}
+>
+  <div class="flex justify-end my-4">
+    <Button href={`/news/${post.id}/`}>Read post &rarr;</Button>
+  </div>
+
+  <div class="hidden sm:inline-block">
+    <span> </span>
+    <p class="poppins mt-2">tags:</p>
+    <div class="flex justify-between items-center">
+      <ul class="flex flex-wrap gap-4 mt-2">
+        {
+          post.data.tags.map((tag) => {
+            return (
+              <li>
+                <a class="sanchez" href={`/news/tags/${tag.toLowerCase()}/`}>
+                  <Pill>{tag}</Pill>
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+      {
+        post.data.draft && (
+          <span class="bg-green rounded-full border-2 py-1 px-4 text-sm border-black card-shadow">
+            Draft
+          </span>
+        )
+      }
+    </div>
+  </div>
+  {
+    (
+      <div class="bg-dark text-white rounded-full border-2 py-1 px-4 text-sm border-black mt-4 w-fit">
+        {dayjs(post.data.pubDate).format("YYYY-MM-DD")}
+      </div>
+    )
+  }
+</SummaryCard>
