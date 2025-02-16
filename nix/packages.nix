@@ -1,10 +1,12 @@
-{ ... }:
-{
+_: {
   perSystem =
     {
+      pkgs,
       ...
     }:
     {
-      packages = { };
+      packages = {
+        hebbot = pkgs.callPackage ./packages/hebbot.nix { };
+      };
     };
 }

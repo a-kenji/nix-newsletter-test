@@ -1,6 +1,7 @@
 {
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable?shallow=1";
+    nixpkgs.url = "github:nixos/nixpkgs?shallow=1";
+    # nixpkgs.url = "github:a-kenji/nixpkgs?shallow=1&ref=twin/hebbot/WIP";
 
     clan.url = "git+https://git.clan.lol/clan/clan-core?shallow=1";
     clan.inputs.nixpkgs.follows = "nixpkgs";
@@ -15,6 +16,9 @@
 
     srvos.url = "github:nix-community/srvos?shallow=1";
     srvos.inputs.nixpkgs.follows = "nixpkgs";
+
+    hebbot.url = "github:haecker-felix/hebbot";
+    hebbot.flake = false;
 
     phaer-keys.url = "https://github.com/phaer.keys";
     phaer-keys.flake = false;
