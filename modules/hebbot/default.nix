@@ -173,8 +173,4 @@ in
       report = ./templates/report.md;
     };
   };
-
-  systemd.services.hebbot.serviceConfig = {
-    WorkingDirectory = lib.mkForce "/var/lib/hebbot";
-  };
 }
