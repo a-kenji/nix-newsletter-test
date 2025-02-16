@@ -9,6 +9,8 @@
     "admins"
   ];
 
+  nix.settings.require-sigs = false;
+
   imports = [
     ./disko.nix
     ./ssh.nix
