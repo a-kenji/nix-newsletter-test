@@ -1,0 +1,39 @@
+---
+import Layout from "@layouts/Default.astro";
+import RecentBlogPosts from "@components/generic/RecentBlogPosts.astro";
+import MobileSocials from "@components/home/MobileSocials.astro";
+import { Pill } from "@eliancodes/brutal-ui";
+import { Button } from "@eliancodes/brutal-ui";
+import { Card } from "@eliancodes/brutal-ui";
+import BlogList from "@components/blog/BlogList.astro";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("blog").then((posts) => posts.reverse());
+
+const builtWith = [
+  { name: "Astro", url: "https://astro.build/" },
+  { name: "UnoCSS", url: "https://uno.antfu.me/" },
+  {
+    name: "Content Collections",
+    url: "https://docs.astro.build/en/guides/content-collections/",
+  },
+  { name: "RSS", url: "https://docs.astro.build/en/guides/rss/" },
+  {
+    name: "Sitemap",
+    url: "https://docs.astro.build/en/guides/integrations-guide/sitemap/",
+  },
+  { name: "Vercel", url: "https://vercel.com" },
+  { name: "TypeScript", url: "https://www.typescriptlang.org/" },
+];
+---
+
+<Layout
+  title="Nixos Weekly"
+  pageTitle="Nixos Weekly"
+  description="Nixos Weekly is a weekly newsletter about Nixos"
+>
+  <main class="bg-[#5277c3] p-6">
+    <MobileSocials />
+    <BlogList posts={posts} />
+  </main>
+</Layout>

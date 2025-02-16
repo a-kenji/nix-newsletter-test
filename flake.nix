@@ -41,6 +41,7 @@
           ./nix/packages.nix
           ./nix/devshells.nix
           ./nix/formatter.nix
+          ./site/blog/flake-module.nix
         ];
       }
     );
