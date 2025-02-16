@@ -1,7 +1,6 @@
-# For now vendored from nixpkgs
 {
+  inputs,
   lib,
-  fetchFromGitHub,
   stdenv,
   rustPlatform,
   pkg-config,
@@ -10,7 +9,6 @@
   autoconf,
   automake,
   darwin,
-  unstableGitUpdater,
   sqlite,
 }:
 
@@ -18,19 +16,11 @@ rustPlatform.buildRustPackage rec {
   pname = "hebbot";
   version = "2.1-unstable-2024-09-20";
 
-  src = fetchFromGitHub {
-    owner = "a-kenji";
-    # owner = "haecker-felix";
-    repo = "hebbot";
-    rev = "f4f0edfd2960a974467480ba15d6da3400548545";
-    # hash = "sha256-y+KpxiEzVAggFoPvTOy0IEmAo2V6mOpM0VzEScUOtsM=";
-    hash = "sha256-dxmIsOIDN+i1MSHwuepvuziHPg12JotL3nM+MlTw4sE=";
-    # hash = lib.fakeHash;
-  };
+  src = inputs.hebbot;
+
+  cargoLock.lockFile = src + /Cargo.lock;
 
   useFetchCargoVendor = true;
-  cargoHash = "sha256-QrGM02rWX+mHQc7kEdCbq7x3Y5Y9IL+XQa4VvejH4KY=";
-  # cargoHash = lib.fakeHash;
 
   nativeBuildInputs =
     [
@@ -59,8 +49,6 @@ rustPlatform.buildRustPackage rec {
     "-L${lib.getLib openssl}/lib"
     "-L${lib.getLib sqlite}/lib"
   ];
-
-  passthru.updateScript = unstableGitUpdater { };
 
   meta = {
     description = "Matrix bot which can generate \"This Week in X\" like blog posts ";

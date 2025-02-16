@@ -75,15 +75,16 @@
     "hebbot": {
       "flake": false,
       "locked": {
-        "lastModified": 1739049143,
-        "narHash": "sha256-Lz2fZQZIVywbKe9AGikYqJky78sb/OJqyDJcMka0Oec=",
-        "owner": "haecker-felix",
+        "lastModified": 1739531294,
+        "narHash": "sha256-dxmIsOIDN+i1MSHwuepvuziHPg12JotL3nM+MlTw4sE=",
+        "owner": "a-kenji",
         "repo": "hebbot",
-        "rev": "bd8bb7b5f3daf6926841007115324fb513b8476f",
+        "rev": "f4f0edfd2960a974467480ba15d6da3400548545",
         "type": "github"
       },
       "original": {
-        "owner": "haecker-felix",
+        "owner": "a-kenji",
+        "ref": "feat/publish",
         "repo": "hebbot",
         "type": "github"
       }

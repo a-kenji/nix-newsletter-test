@@ -1,4 +1,5 @@
-_: {
+{ inputs, ... }:
+{
   perSystem =
     {
       pkgs,
@@ -6,7 +7,7 @@ _: {
     }:
     {
       packages = {
-        hebbot = pkgs.callPackage ./packages/hebbot.nix { };
+        hebbot = pkgs.callPackage ./packages/hebbot.nix { inherit inputs; };
       };
     };
 }
